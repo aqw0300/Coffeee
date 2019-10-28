@@ -162,7 +162,8 @@
         android:textColor="#303339"
         android:text="70"
         android:textAppearance="@style/TextAppearance.AppCompat"
-        android:textSize="24sp" />
+        android:textSize="24sp"
+        android:layout_toLeftOf="@+id/textView" />
 
     <TextView
         android:id="@+id/textView4"
@@ -173,7 +174,8 @@
         android:textColor="#303339"
         android:text="40"
         android:textAppearance="@style/TextAppearance.AppCompat"
-        android:textSize="24sp" />
+        android:textSize="24sp"
+        android:layout_toLeftOf="@+id/textView" />
 
 
 </RelativeLayout>
