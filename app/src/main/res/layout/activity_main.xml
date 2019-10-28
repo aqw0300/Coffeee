@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/activity_main"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="@drawable/coffee"
+        tools:context=".MainActivity"
+        tools:layout_editor_absoluteX="25dp"
+        tools:layout_editor_absoluteY="0dp">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" />
+    </ScrollView>
+
+    <TextView
+
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/nameTxt"
+        android:layout_centerHorizontal="true"
+        android:text="PICK YOUR POISON"
+        android:textAllCaps="true"
+        android:textColor="@color/colorAccent"
+        android:textSize="20dp"
+        android:textStyle="bold" />
+
+
+    <CheckBox
+        android:id="@+id/espresso_checkbox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/textView"
+        android:textColor="@color/colorPrimary"
+        android:layout_below="@+id/textView"
+        android:padding="10dp"
+        android:text="ESPRESSO"
+        android:textAppearance="@style/TextAppearance.AppCompat.Button"
+        android:layout_alignLeft="@+id/textView" />
+
+    <CheckBox
+        android:id="@+id/american_checkbox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/colorPrimary"
+        android:layout_alignStart="@+id/textView"
+        android:layout_below="@+id/espresso_checkbox"
+        android:padding="10dp"
+        android:text="AMERICANO"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+        android:layout_alignLeft="@+id/textView" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/american_checkbox"
+        android:layout_centerHorizontal="true"
+        android:padding="10dp"
+        android:text="Quantity"
+        android:textColor="@color/colorPrimary"
+        android:textSize="20dp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/quantityTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/decrementBt"
+        android:textColor="@color/colorPrimary"
+        android:layout_centerHorizontal="true"
+        android:padding="25dp"
+        android:text="0"
+        android:textSize="40dp" />
+
+    <Button
+        android:id="@+id/decrementBt"
+        android:background="@drawable/left"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView2"
+        android:layout_toStartOf="@+id/orderBt"
+        android:onClick="decrement"
+        android:text=""
+        android:textSize="40dp"
+        tools:ignore="RtlCompat" />
+
+    <Button
+        android:id="@+id/incrementBt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView2"
+        android:layout_toEndOf="@+id/orderBt"
+        android:background="@drawable/right"
+        android:onClick="increment"
+        android:text=""
+        android:textSize="40dp"
+        tools:ignore="RtlCompat" />
+
+    <EditText
+        android:id="@+id/nameTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView5"
+        android:layout_centerHorizontal="true"
+        android:hint="Enter your Name"
+        android:inputType="textCapWords"
+        android:textColor="#26522e" />
+
+    <TextView
+        android:id="@+id/resultTxt"
+        android:layout_width="359dp"
+        android:layout_height="140dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="3dp"
+        android:textColor="#26522e"
+        android:text="Result"
+        android:textSize="20sp"
+        android:visibility="invisible" />
+
+    <Button
+        android:id="@+id/orderBt"
+        android:layout_width="160dp"
+        android:layout_height="81dp"
+        android:layout_below="@+id/quantityTxt"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/order"
+        android:onClick="orderButton" />
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:text="Toy Coffee Duh!"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display2"
+        android:textColor="#303339"
+        android:textSize="40sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView"
+        android:layout_toStartOf="@+id/textView"
+        android:textColor="#303339"
+        android:text="70"
+        android:textAppearance="@style/TextAppearance.AppCompat"
+        android:textSize="24sp" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/espresso_checkbox"
+        android:layout_toStartOf="@+id/textView"
+        android:textColor="#303339"
+        android:text="40"
+        android:textAppearance="@style/TextAppearance.AppCompat"
+        android:textSize="24sp" />
+
+
+</RelativeLayout>
